@@ -12,4 +12,13 @@ export const styles = StyleSheet.create({
         marginVertical: 8,
         marginHorizontal: 16,
       },
+
+    categorias: {
+        flexDirection: "row",
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        // marginRight: 10,
+        marginLeft: 5 
+    }
 })
