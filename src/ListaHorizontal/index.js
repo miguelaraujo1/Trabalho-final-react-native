@@ -2,7 +2,6 @@ import React from "react";
 import { Dimensions, FlatList } from "react-native";
 import { View, Image, Text } from "react-native";
 import { ImageBackground } from "react-native";
-import bgImg from "../images/will.jfif";
 
 const { width } = Dimensions.get("window");
 const ListaHorizontal = ({ dados }) => {

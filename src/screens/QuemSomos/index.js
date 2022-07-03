@@ -1,10 +1,9 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
 import { View, Image } from "react-native";
-import bgImg from "../../images/will.jfif";
 import ListaHorizontal from "../../ListaHorizontal";
 
-const will = require("../../images/will.jfif");
+// const will = require("../../images/will.jfif");
 const miguel = require("../../images/miguel.jpeg");
 const danilo = require("../../images/Danilo.jpeg");
 const eduardo = require("../../images/eduardo.jpg");
@@ -25,12 +24,12 @@ const QuemSomos = () => {
       foto: danilo,
       id: "2",
     },
-    {
-      cor: "#F20",
-      name: "Pv",
-      foto: will,
-      id: "3",
-    },
+    // {
+    //   cor: "#F20",
+    //   name: "Pv",
+    //   foto: will,
+    //   id: "3",
+    // },
     {
       cor: "#F20",
       name: "Cynthia",
