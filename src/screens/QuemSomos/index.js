@@ -11,7 +11,7 @@ const vinicius = require("../../images/vinicius.jpg");
 const cynthia = require("../../images/cynthia.jpg");
 const pv = require("../../images/pv.jpeg")
 
-const QuemSomos = () => {
+export const QuemSomos = () => {
   const dados = [
     {
       name: "Miguel",
@@ -50,4 +50,3 @@ const QuemSomos = () => {
     </SafeAreaView>
   );
 };
-export default QuemSomos;
