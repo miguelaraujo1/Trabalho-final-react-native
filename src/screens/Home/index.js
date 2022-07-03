@@ -10,7 +10,7 @@ const Item = ({ title }) => (
     </View>
 );
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [listaProdutos, setListaProdutos] = useState(null)
     const [categorias, setCategorias] = useState(null)
     
@@ -55,6 +55,7 @@ const Home = () => {
             {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
                 <Text style={styles.item}>{item.nomeProduto}</Text>
             )} keyExtractor={item => item.idProduto}/>}
+            <Button mode="contained" onPress={()=>navigation.navigate('QuemSomos')}>Quem Somos</Button>
         </ImageBackground>
     )
 }
