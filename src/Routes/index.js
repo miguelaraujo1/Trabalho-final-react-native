@@ -17,7 +17,6 @@ const Routes = () => {
                     <Stack.Screen
                     name='QuemSomos'
                     component={QuemSomos}
-                    options={{headerShown: false}}
                     />
             </Stack.Navigator>
         </NavigationContainer>

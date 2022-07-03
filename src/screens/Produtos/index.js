@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { ImageBackground, Text, FlatList, View} from "react-native"
-import { Button} from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
 import { styles } from "./styles"
 
@@ -10,7 +10,7 @@ const Item = ({ title }) => (
     </View>
 );
 
-const Home = ({navigation}) => {
+const ListarProdutos = ({navigation}) => {
     const [listaProdutos, setListaProdutos] = useState(null)
     const [categorias, setCategorias] = useState(null)
     
@@ -55,9 +55,8 @@ const Home = ({navigation}) => {
             {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
                 <Text style={styles.item}>{item.nomeProduto}</Text>
             )} keyExtractor={item => item.idProduto}/>}
-            <Button mode="contained" onPress={()=>navigation.navigate('QuemSomos')}>Quem Somos</Button>
         </ImageBackground>
     )
 }
 
-export default Home
+export default ListarProdutos
