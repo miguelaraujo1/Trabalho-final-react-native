@@ -18,7 +18,8 @@ export const styles = StyleSheet.create({
         overflow: "hidden",
         borderWidth: 3,
         borderColor: '#add8e6',
-        marginTop:12
+        marginTop:'16%',
+
     }
 }
 )
