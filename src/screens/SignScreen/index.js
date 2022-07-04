@@ -10,7 +10,7 @@ import { AuthContext } from "../../contexts/Auth";
 export const SignScreen = ({navigation}) => {
   const { authenticated, login } = useContext(AuthContext)
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(""); 
 
   const handleSubmit = () => {
     console.log("clicou", { email, password })

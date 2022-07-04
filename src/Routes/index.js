@@ -13,6 +13,7 @@ const Stack = createNativeStackNavigator();
 import RotaProduto from "./RotaProduto";
 
 export const Routes = () => {
+ // NÃO APAGAR 
 //   const navigation = useNavigation();
 //   const Private = ({children}) => {
 //     const { authenticated } = useContext(AuthContext);
