@@ -10,6 +10,7 @@ import { AuthProvider} from "../contexts/Auth";
 import {Home} from "../screens/Home";
 import {QuemSomos} from "../screens/QuemSomos";
 const Stack = createNativeStackNavigator();
+import RotaProduto from "./RotaProduto";
 
 export const Routes = () => {
 //   const navigation = useNavigation();
@@ -30,6 +31,7 @@ export const Routes = () => {
           <Stack.Screen name="SignScreen" component={SignScreen} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
+          <Stack.Screen name="RotaProduto" component={RotaProduto} />
         </Stack.Navigator>
       </AuthProvider>
     </NavigationContainer>
