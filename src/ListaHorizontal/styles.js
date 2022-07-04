@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         flex:1,
         marginTop:40,
         alignItems:"center",
-        backgroundColor:"grey"
+        backgroundColor:"#ff7539"
     },
     fotos:{
         width: 150,
