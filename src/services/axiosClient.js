@@ -13,10 +13,11 @@ export const getProdutosByCategoria = async (id) => {
 }
 
 export const postProduto = async(idCategoria ,nomeProduto, qtdEstoque, valorUnitario) => {
-    const { data } = await api.post("/tegloja/categorias", {idCategoria: idCategoria,
+    const { data } = await api.post("/tegloja/produtos", {idCategoria: idCategoria,
     nomeProduto: nomeProduto,
     quantidadeEstoque: qtdEstoque,
     valorUnitario: valorUnitario})
+    console.log(data)
 
     return data
 }
