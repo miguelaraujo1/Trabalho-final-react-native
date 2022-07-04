@@ -50,7 +50,7 @@ export const QuemSomos = () => {
   },
   ];
   return (
-    <SafeAreaView style={{backgroundColor: '#ff7539'}}>
+    <SafeAreaView style={{backgroundColor: '#ff7539', marginTop:'14%'}}>
       <ListaHorizontal dados={dados} />
     </SafeAreaView>
   );

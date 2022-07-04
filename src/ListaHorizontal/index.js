@@ -31,7 +31,8 @@ const ListaHorizontal = ({ dados }) => {
               borderRadius: 12,
               alignItems: "center",
               backgroundColor: "#ff3d00",
-              marginBottom:'7%'
+              marginBottom:'7%',
+              
             }}
           >
             <ImageBackground style={styles.fotos} source={item.foto}>
