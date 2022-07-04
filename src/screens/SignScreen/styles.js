@@ -27,6 +27,6 @@ export const styles = StyleSheet.create({
     width: "90%",
     height: '8%',
     margin: '1.5%',
-    fontSize: '100%',  
+    fontSize: 100,  
   },
 });

@@ -9,6 +9,7 @@ import { SignScreen } from "../screens/SignScreen";
 import { AuthProvider} from "../contexts/Auth";
 import {Home} from "../screens/Home";
 import {QuemSomos} from "../screens/QuemSomos";
+import RotaProduto from "./RotaProduto";
 const Stack = createNativeStackNavigator();
 
 export const Routes = () => {
@@ -25,13 +26,16 @@ export const Routes = () => {
 
   return (
     <NavigationContainer>
-      <AuthProvider>
+
+      {/* <AuthProvider>
         <Stack.Navigator>
           <Stack.Screen name="SignScreen" component={SignScreen} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
         </Stack.Navigator>
-      </AuthProvider>
+      </AuthProvider> */}
+
+      <RotaProduto></RotaProduto>
     </NavigationContainer>
   );
 };

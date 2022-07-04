@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { ImageBackground, Text, FlatList, View} from "react-native"
 import { Button} from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
-import { styles } from "./styles"
+
 
 const Item = ({ title }) => (
     <View style={styles.item}>
