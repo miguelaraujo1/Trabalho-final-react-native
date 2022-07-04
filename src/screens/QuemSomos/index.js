@@ -1,7 +1,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import { View, Image } from "react-native";
-import ListaHorizontal from "../../ListaHorizontal";
+import ListaHorizontal from "../../ListaHorizontal/";
 
 // const will = require("../../images/will.jfif");
 const miguel = require("../../images/miguel.jpeg");
@@ -17,36 +16,43 @@ export const QuemSomos = () => {
       name: "Miguel",
       foto: miguel,
       id: "1",
+      texto: "Natural de Teresópolis, Responsável pelo desenvolvimento da página sobre os integrantes."
     },
     {
       name: "Danilo",
       foto: danilo,
       id: "2",
+      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
     },
     {
       name: "Cynthia",
       foto: cynthia,
       id: "4",
+      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
     },
     {
       name: "Vinicius",
       foto: vinicius,
       id: "5",
+      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
     },
     {
         name:'Eduardo',
         foto: eduardo,
-        id:"6"
+        id:"6",
+        texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
     },
     {
       name:'Paulo Vitor',
       foto: pv,
-      id:"7"
+      id:"7",
+      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
   },
   ];
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: '#ff7539'}}>
       <ListaHorizontal dados={dados} />
     </SafeAreaView>
   );
 };
+

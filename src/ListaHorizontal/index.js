@@ -1,22 +1,37 @@
 import React from "react";
 import { Dimensions, FlatList } from "react-native";
-import { View, Image, Text } from "react-native";
+import { View, Text } from "react-native";
 import { ImageBackground } from "react-native";
 import { styles } from "./styles";
+
+const { width } = Dimensions.get("window");
 
 const ListaHorizontal = ({ dados }) => {
   return (
     <View style={{}}>
       <FlatList
         data={dados}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item)}
+        snapToOffsets={[...Array(dados.length)].map(
+          (x, i) => i * (width * 0.8 - 40) + (i - 1) * 40,
+        )}
         horizontal
         snapToAlignment={"start"}
+        showsHorizontalScrollIndicator={false}
         scrollEventThrottle={16}
         decelerationRate="fast"
-        // snapToOffsets={[1]}
+        style={{ marginTop: 20 }}
         renderItem={({ item }) => (
-          <View style={styles.flatList}>
+          <View
+            style={{
+              width: width * 0.8 - 20,
+              height: 600,
+              marginHorizontal: 10,
+              borderRadius: 12,
+              alignItems: "center",
+              backgroundColor: "#ff3d00",
+            }}
+          >
             <ImageBackground style={styles.fotos} source={item.foto}>
               <View></View>
             </ImageBackground>
@@ -33,10 +48,7 @@ const ListaHorizontal = ({ dados }) => {
             </Text>
             <Text style={{ marginTop: "15%", padding: "5%" }}>
               {" "}
-              Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi
-              eu sit. Vide electram sadipscing et per. Per aumento de cachacis,
-              eu reclamis. Paisis, filhis, espiritis santis. Cevadis im ampola
-              pa arma uma pindureta.
+              {item.texto}
             </Text>
           </View>
         )}
