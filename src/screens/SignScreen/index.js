@@ -25,8 +25,9 @@ export const SignScreen = ({navigation}) => {
         <TextInput secureTextEntry placeholder="senha" value={password} onChangeText={setPassword} style={styles.input} />
         <Text style={{margin: '2%'}}></Text>
         <Button title="Entrar" onPress={handleSubmit} />
-        <br />
+        <View style={{marginTop:'3%'}}>
         <Button title="Quem Somos" onPress={()=>navigation.navigate('QuemSomos')}>Quem Somos</Button>
+        </View>
       </View>
 
       <Text>

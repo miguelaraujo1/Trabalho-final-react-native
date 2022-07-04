@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     width: "90%",
     height: '8%',
-    margin: '1.5%',
-    fontSize: '100%',  
+    margin: '1.5%'
+   
   },
 });

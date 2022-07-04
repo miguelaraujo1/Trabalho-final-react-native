@@ -57,7 +57,7 @@ export const Home = ({navigation}) => {
             )} keyExtractor={item => item.idProduto}/>}
 
             {/* //botao so pra testar a rota */}
-            <Button mode="contained" onPress={()=>navigation.navigate('RotaProduto')}>Sign</Button>
+            <Button mode="contained" onPress={()=>navigation.navigate('RotaProduto')}>Teste RotaProduto</Button>
         </ImageBackground>
     )
 }
