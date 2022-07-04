@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { ImageBackground, Text, FlatList, View} from "react-native"
-import { Button } from 'react-native-paper';
+import { Button, Avatar, Card, IconButton } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
 import { styles } from "./styles"
 
@@ -51,9 +51,15 @@ const ListarProdutos = ({navigation}) => {
             <Text>BikeLovers!</Text>
             <View style={styles.categorias}>
             {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)}
+            <Button mode="contained" onPress={()=>listarProdutos()}>TODAS</Button>
             </View>
-            {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
-                <Text style={styles.item}>{item.nomeProduto}</Text>
+            {listaProdutos && <FlatList style={{width:300}} data={listaProdutos} renderItem={({ item })=> (   
+                <Card.Title 
+                    title={item.nomeProduto}
+                    subtitle={`Qtd: ${item.quantidadeEstoque}`}
+                    left={(props) => <Avatar.Icon {...props} icon="folder" />}
+                    
+                />
             )} keyExtractor={item => item.idProduto}/>}
         </ImageBackground>
     )
