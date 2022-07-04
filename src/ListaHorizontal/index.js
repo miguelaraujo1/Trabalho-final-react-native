@@ -11,7 +11,7 @@ const ListaHorizontal = ({ dados }) => {
     <View style={{}}>
       <FlatList
         data={dados}
-        keyExtractor={(item) => String(item)}
+        keyExtractor={(item) => item.id}
         snapToOffsets={[...Array(dados.length)].map(
           (x, i) => i * (width * 0.8 - 40) + (i - 1) * 40,
         )}
@@ -21,8 +21,9 @@ const ListaHorizontal = ({ dados }) => {
         scrollEventThrottle={16}
         decelerationRate="fast"
         style={{ marginTop: 20 }}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <View
+            key={index}
             style={{
               width: width * 0.8 - 20,
               height: 600,
@@ -30,6 +31,7 @@ const ListaHorizontal = ({ dados }) => {
               borderRadius: 12,
               alignItems: "center",
               backgroundColor: "#ff3d00",
+              marginBottom:'7%'
             }}
           >
             <ImageBackground style={styles.fotos} source={item.foto}>
