@@ -24,6 +24,13 @@ export const ButtonStyle2 = ({ labelButton, onpress }) => {
     </TouchableOpacity>
   );
 };
+export const ButtonStyle3 = ({ labelButton, onpress }) => {
+  return (
+    <TouchableOpacity style={styles.button3} onPress={onpress}>
+      <Text style={styles.text}>{labelButton}</Text>
+    </TouchableOpacity>
+  );
+};
 
 const styles = StyleSheet.create({
   button: {
@@ -57,6 +64,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#e03404",
     width: "18%",
     height: "6%",
+    margin: 7,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    borderColor: "#ffffff",
+    borderWidth: 2.8,
+  },
+
+   button3: {
+    // backgroundColor: "#ffffff",
+    // backgroundColor: "#ff3d00",
+    backgroundColor: "#e03404",
+    width: "15%",
+    height: "15%",
     margin: 7,
     justifyContent: "center",
     alignItems: "center",

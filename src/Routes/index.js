@@ -43,19 +43,19 @@ export const Routes = () => {
     <NavigationContainer>
       <AuthProvider>
         <Stack.Navigator>
-<<<<<<< HEAD
-          <Stack.Screen name="SignScreen" component={SignScreen} options={{headerShown:false}} />
-          <Stack.Screen
-=======
           <Stack.Screen name="SignScreen" component={SignScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Home" component={Home}/>
-          <Stack.Screen name="TabsProduto" component={TabsProduto} />
+          <Stack.Screen name="Root" component={TabsProduto} options={{ headerShown: false }}/>
+            <Stack.Screen name="ExibirProduto" component={ExibirProduto}  />
+                
+              
+            
+          {/* <Stack.Screen name="Home" component={Home}/> */}
+          {/* <Stack.Screen name="TabsProduto" component={TabsProduto} /> */}
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
         </Stack.Navigator>
       </AuthProvider>
       {/* <Stack.Navigator initialRouteName="Root">
             <Stack.Screen
->>>>>>> 67f37eb7aecde3dc2fa0fd239751f33b63d674f2
               name="Root"
               component={TabsProduto}
               options={{ headerShown: false }}
@@ -64,18 +64,7 @@ export const Routes = () => {
                 name="ExibirProduto"
                 component={ExibirProduto}
             />
-<<<<<<< HEAD
-          <Stack.Screen name="QuemSomos" component={QuemSomos} />
-          
-        </Stack.Navigator>
-      </AuthProvider>
-      {/* <Stack.Navigator initialRouteName="Root">
-            
-      </Stack.Navigator> */}
-      
-=======
         </Stack.Navigator> */}
->>>>>>> 67f37eb7aecde3dc2fa0fd239751f33b63d674f2
     </NavigationContainer>
   );
 };

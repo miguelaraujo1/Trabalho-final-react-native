@@ -28,13 +28,8 @@ export const AuthProvider = ({ children }) => {
 
     //verificação de senha correta
     if (password === "secret") {
-<<<<<<< HEAD
-      setUser({ id: "123", email });
-      navigation.navigate("Root");
-=======
       setUser(loggedUser);
-      navigation.navigate("Home");
->>>>>>> 67f37eb7aecde3dc2fa0fd239751f33b63d674f2
+      navigation.navigate("Root");
     } else {
       alert("dados incorretos, por favor tente novamente.");
     }
