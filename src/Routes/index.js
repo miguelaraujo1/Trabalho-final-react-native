@@ -9,7 +9,9 @@ import { SignScreen } from "../screens/SignScreen";
 import { AuthProvider} from "../contexts/Auth";
 import {Home} from "../screens/Home";
 import {QuemSomos} from "../screens/QuemSomos";
-import RotaProduto from "./RotaProduto";
+import TabsProduto from "./TabsProduto";
+import { ProdutoProvider } from "../contexts/ProdutoContext";
+import ExibirProduto from "../screens/Produtos/ExibirProduto";
 const Stack = createNativeStackNavigator();
 
 export const Routes = () => {
@@ -34,8 +36,18 @@ export const Routes = () => {
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
         </Stack.Navigator>
       </AuthProvider> */}
-
-      <RotaProduto></RotaProduto>
+      <Stack.Navigator initialRouteName="Root">
+            <Stack.Screen
+              name="Root"
+              component={TabsProduto}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="ExibirProduto"
+                component={ExibirProduto}
+            />
+        </Stack.Navigator>
+      
     </NavigationContainer>
   );
 };
