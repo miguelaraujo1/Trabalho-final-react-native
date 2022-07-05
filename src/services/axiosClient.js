@@ -17,7 +17,6 @@ export const postProduto = async(idCategoria ,nomeProduto, qtdEstoque, valorUnit
     nomeProduto: nomeProduto,
     quantidadeEstoque: qtdEstoque,
     valorUnitario: valorUnitario})
-    console.log(data)
 
     return data
 }
@@ -29,5 +28,12 @@ export const postProduto = async(idCategoria ,nomeProduto, qtdEstoque, valorUnit
 export const getCategorias = async () => {
     const { data } = await api.get("/tegloja/categorias")
 
+    return data
+}
+
+export const getProdutoById = async (idProduto) => {
+    const {data} = await api.get(`/tegloja/produtos/${idProduto}`)
+
+    console.log('axios: ', data)
     return data
 }
