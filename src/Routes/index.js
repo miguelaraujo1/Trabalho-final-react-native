@@ -31,7 +31,7 @@ export const Routes = () => {
         <Stack.Navigator>
           <Stack.Screen name="SignScreen" component={SignScreen} options={{headerShown:false}} />
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="QuemSomos" component={QuemSomos} options={{headerShown:false}} />
+          <Stack.Screen name="QuemSomos" component={QuemSomos} />
           <Stack.Screen name="RotaProduto" component={RotaProduto} />
         </Stack.Navigator>
       </AuthProvider>
