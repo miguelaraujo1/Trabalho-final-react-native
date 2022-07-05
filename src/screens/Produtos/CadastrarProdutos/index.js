@@ -30,7 +30,7 @@ const CadastrarProdutos = ({CadastrarProdutos}) => {
     const inserirProduto = async() => {
         console.log(typeof categoria.id, typeof nomeProduto, typeof quantidade, typeof valorUnitario)
         if (!!categoria && !!nomeProduto && quantidade && valorUnitario){
-            const post = await postProduto(categoria.id ,nomeProduto, quantidade, valorUnitario)
+            const post = await postProduto(categoria ,nomeProduto, quantidade, valorUnitario)
             console.log(post)
         } else {
             setWarning('Campo(s) nao preenchidos')
@@ -48,7 +48,7 @@ const CadastrarProdutos = ({CadastrarProdutos}) => {
             <Text >Escolha a categoria</Text>
         </View>
         <Picker selectedValue = {categoria} onValueChange = {(value) => setCategoria(value)}>
-            {listaCategorias && listaCategorias.map((categoria, index) => <Picker.Item key={index} label={categoria.categoria} value={categoria} />)}     
+            {listaCategorias && listaCategorias.map((categoria, index) => <Picker.Item key={index} label={categoria.categoria} value={categoria.id} />)}     
         </Picker>
         <View style={styles.field}>
             <Text>Insira o nome do produto:</Text>
