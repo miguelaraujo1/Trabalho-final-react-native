@@ -33,13 +33,7 @@ export const Routes = () => {
       <AuthProvider>
         <Stack.Navigator>
           <Stack.Screen name="SignScreen" component={SignScreen} options={{headerShown:false}} />
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="QuemSomos" component={QuemSomos} />
-          
-        </Stack.Navigator>
-      </AuthProvider>
-      {/* <Stack.Navigator initialRouteName="Root">
-            <Stack.Screen
+          <Stack.Screen
               name="Root"
               component={TabsProduto}
               options={{ headerShown: false }}
@@ -48,7 +42,13 @@ export const Routes = () => {
                 name="ExibirProduto"
                 component={ExibirProduto}
             />
-        </Stack.Navigator> */}
+          <Stack.Screen name="QuemSomos" component={QuemSomos} />
+          
+        </Stack.Navigator>
+      </AuthProvider>
+      {/* <Stack.Navigator initialRouteName="Root">
+            
+      </Stack.Navigator> */}
       
     </NavigationContainer>
   );
