@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   image: {
     width: "40%",
     height: "20%",
+    marginTop: "20%"
   },
   marca: {
     color: "#ffffff",
