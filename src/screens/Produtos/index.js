@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { ImageBackground, Text, FlatList, View} from "react-native"
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { Button, Avatar, Card, IconButton } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
+import ExibirProduto from "./ExibirProduto";
 import { styles } from "./styles"
 
 const Item = ({ title }) => (
@@ -29,6 +31,10 @@ const ListarProdutos = ({navigation}) => {
         setCategorias(categorias)
     }
 
+    const exibirProduto = (idProduto) => {
+        navigation.navigate("ExibirProduto", {idProduto: idProduto})
+    }
+
     useEffect(()=> {
         if(listaProdutos === null) {
             listarProdutos()
@@ -53,13 +59,17 @@ const ListarProdutos = ({navigation}) => {
             {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)}
             <Button mode="contained" onPress={()=>listarProdutos()}>TODAS</Button>
             </View>
-            {listaProdutos && <FlatList style={{width:300}} data={listaProdutos} renderItem={({ item })=> (   
+            {listaProdutos && <FlatList style={{width:300}} data={listaProdutos} renderItem={({ item })=> (
+                <TouchableOpacity onPress={()=>exibirProduto(item.idProduto)}>
+
                 <Card.Title 
+                    
                     title={item.nomeProduto}
                     subtitle={`Qtd: ${item.quantidadeEstoque}`}
                     left={(props) => <Avatar.Icon {...props} icon="folder" />}
                     
-                />
+                    />
+                </TouchableOpacity>   
             )} keyExtractor={item => item.idProduto}/>}
         </ImageBackground>
     )
