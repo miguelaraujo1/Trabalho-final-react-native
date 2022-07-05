@@ -13,7 +13,6 @@ import TabsProduto from "./TabsProduto";
 import { ProdutoProvider } from "../contexts/ProdutoContext";
 import ExibirProduto from "../screens/Produtos/ExibirProduto";
 const Stack = createNativeStackNavigator();
-import RotaProduto from "./RotaProduto";
 
 export const Routes = () => {
  
@@ -31,15 +30,15 @@ export const Routes = () => {
   return (
     <NavigationContainer>
 
-      {/* <AuthProvider>
+      <AuthProvider>
         <Stack.Navigator>
           <Stack.Screen name="SignScreen" component={SignScreen} options={{headerShown:false}} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
-          <Stack.Screen name="RotaProduto" component={RotaProduto} />
+          
         </Stack.Navigator>
-      </AuthProvider> */}
-      <Stack.Navigator initialRouteName="Root">
+      </AuthProvider>
+      {/* <Stack.Navigator initialRouteName="Root">
             <Stack.Screen
               name="Root"
               component={TabsProduto}
@@ -49,7 +48,7 @@ export const Routes = () => {
                 name="ExibirProduto"
                 component={ExibirProduto}
             />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
       
     </NavigationContainer>
   );
