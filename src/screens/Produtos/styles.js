@@ -18,6 +18,6 @@ export const styles = StyleSheet.create({
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        marginLeft: 5 
+        marginLeft: 5 ,
     }
 })
