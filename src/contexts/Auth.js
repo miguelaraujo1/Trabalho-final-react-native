@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     //verificação de senha correta
     if (password === "secret") {
       setUser({ id: "123", email });
-      navigation.navigate("Home");
+      navigation.navigate("Root");
     } else {
         alert("dados incorretos, por favor tente novamente.")
     }
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     console.log("logout");
     setUser(null);
-    navigation.navigate("SignIn");
+    navigation.navigate("SignScreen");
   };
 
   return (
