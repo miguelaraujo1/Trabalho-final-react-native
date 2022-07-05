@@ -48,7 +48,6 @@ const ListarProdutos = ({navigation}) => {
 
     return (
         <ImageBackground style={styles.container}>
-            <Text>BikeLovers!</Text>
             <View style={styles.categorias}>
             {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)}
             <Button mode="contained" onPress={()=>listarProdutos()}>TODAS</Button>

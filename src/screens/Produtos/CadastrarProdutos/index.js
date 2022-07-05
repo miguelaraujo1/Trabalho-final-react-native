@@ -5,7 +5,7 @@ import SelectPicker from 'react-native-form-select-picker';
 import { Text, View} from 'react-native'
 import { Picker } from "@react-native-picker/picker";
 import { Button, TextInput } from "react-native-paper";
-import { styles } from "./styles";
+import { styles } from "../styles";
 const CadastrarProdutos = ({CadastrarProdutos}) => {
     const [categoria, setCategoria] = useState();
     const [listaCategorias, setListaCategorias] = useState(null)
