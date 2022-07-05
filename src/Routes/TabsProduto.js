@@ -7,7 +7,7 @@ import ExibirProduto from "../screens/Produtos/ExibirProduto";
 
 const Tabs = createBottomTabNavigator()
 
-const TabsProduto = () => {
+export const TabsProduto = () => {
 
     return(
         <>
@@ -19,4 +19,3 @@ const TabsProduto = () => {
     )
 }
 
-export default TabsProduto
