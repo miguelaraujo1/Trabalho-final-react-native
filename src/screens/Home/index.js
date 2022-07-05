@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import { ImageBackground, Text, FlatList, View} from "react-native"
 import { Button} from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
-
+import { styles } from "./styles";
+import { AuthContext } from "../../contexts/Auth";
+import { ButtonStyle2 } from "../../components/ButtonStyle";
 
 const Item = ({ title }) => (
     <View style={styles.item}>
@@ -13,6 +15,7 @@ const Item = ({ title }) => (
 export const Home = ({navigation}) => {
     const [listaProdutos, setListaProdutos] = useState(null)
     const [categorias, setCategorias] = useState(null)
+    const {logout} = useContext(AuthContext);
     
     const listarProdutos = async () => {
         const produtos = await getProdutos()
@@ -46,6 +49,10 @@ export const Home = ({navigation}) => {
     //     <Item title={item.nomeProduto} />
     // );
 
+    const handleLogout = () => {
+        logout()
+    }
+
     return (
         <ImageBackground style={styles.container}>
             <Text>BikeLovers!</Text>
@@ -55,7 +62,10 @@ export const Home = ({navigation}) => {
             {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
                 <Text style={styles.item}>{item.nomeProduto}</Text>
             )} keyExtractor={item => item.idProduto}/>}
-            {/* <Button mode="contained" onPress={()=>navigation.navigate('SignScreen')}>Sign</Button> */}
+
+            {/* //botao so pra testar a rota */}
+            <ButtonStyle2 labelButton="Logout" onpress={handleLogout}/>
+            <Button mode="contained" onPress={()=>navigation.navigate('TabsProduto')}>Teste RotaProduto</Button>
         </ImageBackground>
     )
 }
