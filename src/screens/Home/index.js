@@ -55,7 +55,9 @@ export const Home = ({navigation}) => {
             {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
                 <Text style={styles.item}>{item.nomeProduto}</Text>
             )} keyExtractor={item => item.idProduto}/>}
-            {/* <Button mode="contained" onPress={()=>navigation.navigate('SignScreen')}>Sign</Button> */}
+
+            {/* //botao so pra testar a rota */}
+            <Button mode="contained" onPress={()=>navigation.navigate('RotaProduto')}>Teste RotaProduto</Button>
         </ImageBackground>
     )
 }
