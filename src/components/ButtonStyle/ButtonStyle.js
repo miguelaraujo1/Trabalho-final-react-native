@@ -31,11 +31,32 @@ export const ButtonStyle3 = ({ labelButton, onpress }) => {
     </TouchableOpacity>
   );
 };
-
+//4
 export const ButtonLogout = ({ onpress }) => {
   return (
     <TouchableOpacity style={styles.button4} onPress={onpress}>
       <Text></Text>
+    </TouchableOpacity>
+  );
+};
+export const ButtonStyle5 = ({ labelButton, onpress }) => {
+  return (
+    <TouchableOpacity style={styles.button5} onPress={onpress}>
+      <Text style={styles.text}>{labelButton}</Text>
+    </TouchableOpacity>
+  );
+};
+export const ButtonConfirmar = ({ labelButton, onpress }) => {
+  return (
+    <TouchableOpacity style={styles.button6} onPress={onpress}>
+      <Text style={styles.text}>{labelButton}</Text>
+    </TouchableOpacity>
+  );
+};
+export const ButtonCancelar = ({ labelButton, onpress }) => {
+  return (
+    <TouchableOpacity style={styles.button7} onPress={onpress}>
+      <Text style={styles.text}>{labelButton}</Text>
     </TouchableOpacity>
   );
 };
@@ -107,6 +128,51 @@ const styles = StyleSheet.create({
     backgroundColor: "#e03404",
     width: "30%",
     height: "14%",
+    margin: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    borderColor: "#ffffff",
+    borderWidth: 2.8,
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
+  },
+  button5: {
+    //backgroundColor: "#ffffff",
+    backgroundColor: "#e03404",
+    width: "30%",
+    height: "8%",
+    margin: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    borderColor: "#ffffff",
+    borderWidth: 2.8,
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
+  },
+  button6: {
+    //backgroundColor: "#ffffff",
+    backgroundColor: "green",
+    width: "40%",
+    height: "90%",
+    margin: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 6,
+    borderColor: "#ffffff",
+    borderWidth: 2.8,
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
+  },
+  button7: {
+    //backgroundColor: "#ffffff",
+    backgroundColor: "red",
+    width: "40%",
+    height: "90%",
     margin: 12,
     justifyContent: "center",
     alignItems: "center",

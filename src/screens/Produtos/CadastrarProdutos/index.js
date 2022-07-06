@@ -9,7 +9,8 @@ import SelectPicker from "react-native-form-select-picker";
 import { Text, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { Button, TextInput } from "react-native-paper";
-import { styles } from "../styles";
+import { styles } from "./styles"
+import { ButtonStyle, ButtonStyle5 } from "../../../components/ButtonStyle/ButtonStyle";
 
 const CadastrarProdutos = ({ CadastrarProdutos }) => {
   const [categoria, setCategoria] = useState();
@@ -54,11 +55,11 @@ const CadastrarProdutos = ({ CadastrarProdutos }) => {
 
   return (
     //...
-    <View style={{ backgroundColor: "#ff3d00", justifyContent:'center', width: '100%'}}>
+    <View style={{ flex:1 ,backgroundColor: "#ff3d00", justifyContent:'center', width: '100%',alignItems: "center"}}>
       <View style={{ alignItems: "center", marginTop: 20, justifyContent:'center', width: '90%'  }}>
-        <Text>Escolha a categoria</Text>
+        <Text style={styles.texts}>Escolha a categoria</Text>
       </View>
-      <Picker
+      <Picker style={{marginTop:"2%"}}
         selectedValue={categoria}
         onValueChange={(value) => setCategoria(value)}
       >
@@ -72,28 +73,28 @@ const CadastrarProdutos = ({ CadastrarProdutos }) => {
           ))}
       </Picker>
       <View style={styles.field}>
-        <Text>Insira o nome do produto:</Text>
+        <Text style={styles.texts}>Insira o nome do produto:</Text>
         <TextInput
           style={styles.input}
-          mode="outlined"
+          // mode="outlined"
           value={nomeProduto}
           onChangeText={(text) => setNomeProduto(text)}
         />
       </View>
       <View style={[styles.field, { marginTop: 10 }]}>
-        <Text>Insira a quantidade para estoque</Text>
+        <Text style={styles.texts}>Insira a quantidade para estoque:</Text>
         <TextInput
           style={styles.input}
-          mode="outlined"
+          // mode="outlined"
           value={quantidade}
           onChangeText={(text) => setQuantidade(text)}
         />
       </View>
       <View style={[styles.field, { marginTop: 10, marginBottom: 15 }]}>
-        <Text>Insira o Valor unitario - R$0,00</Text>
+        <Text style={styles.texts}>Insira o Valor unitario - R$0,00</Text>
         <TextInput
           style={styles.input}
-          mode="outlined"
+          // mode="outlined"
           value={valorUnitario}
           onChangeText={(text) => setValorUnitario(text)}
         />
@@ -101,10 +102,8 @@ const CadastrarProdutos = ({ CadastrarProdutos }) => {
 
       {!!warning && warning}
 
-      <Button mode="contained-tonal" onPress={inserirProduto}>
-        CADASTRAR
-      </Button>
-      <Button onPress={() => alert("por aqui")}>LOG OUT</Button>
+   
+      <ButtonStyle5 labelButton="CADASTRAR" onpress={inserirProduto}/>
     </View>
   );
 };

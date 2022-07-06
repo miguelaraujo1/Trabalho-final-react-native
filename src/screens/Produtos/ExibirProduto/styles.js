@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     action: {
         width: 90, 
         marginLeft: 20, 
-        marginTop:10
+        marginTop:20
     }
 })
 
