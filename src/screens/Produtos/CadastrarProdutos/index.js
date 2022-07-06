@@ -6,6 +6,8 @@ import { Text, View} from 'react-native'
 import { Picker } from "@react-native-picker/picker";
 import { Button, TextInput } from "react-native-paper";
 import { styles } from "../styles";
+
+
 const CadastrarProdutos = ({CadastrarProdutos}) => {
     const [categoria, setCategoria] = useState();
     const [listaCategorias, setListaCategorias] = useState(null)
@@ -66,6 +68,7 @@ const CadastrarProdutos = ({CadastrarProdutos}) => {
         {!!warning && warning}
 
         <Button mode='contained-tonal' onPress={inserirProduto}>CADASTRAR</Button>
+        <Button onPress={()=>alert("por aqui")}>LOG OUT</Button>
         </>
         
 
