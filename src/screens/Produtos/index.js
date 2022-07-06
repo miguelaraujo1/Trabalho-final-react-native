@@ -63,11 +63,11 @@ const ListarProdutos = ({navigation}) => {
 
 
             </View>
-            {listaProdutos && <FlatList showsVerticalScrollIndicator={false} style={{width:300}} data={listaProdutos} renderItem={({ item })=> (
+            {listaProdutos && <FlatList showsVerticalScrollIndicator={false} style={{width:"80%" }} data={listaProdutos} renderItem={({ item })=> (
                 <TouchableOpacity onPress={()=>exibirProduto(item.idProduto)}>
 
                 <Card.Title 
-                    style={{borderColor:"white", borderWidth:3, borderRadius:12, margin:1.5, backgroundColor:"#e03404", shadowColor:"black", shadowRadius:5.5, shadowOpacity:10}}
+                    style={{borderColor:"white", borderWidth:3, borderRadius:12, margin:1.5, backgroundColor:"#e03404", shadowColor:"#821d01", shadowRadius:15, shadowOpacity:95}}
                     title={item.nomeProduto}
                     subtitle={`Qtd: ${item.quantidadeEstoque}`}
                     left={(props) => <Avatar.Icon {...props} icon="folder" />}    

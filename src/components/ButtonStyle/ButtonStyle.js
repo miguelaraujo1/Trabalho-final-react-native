@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderColor: "#ffffff",
     borderWidth: 2.8,
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
   },
   button1: {
     //backgroundColor: "#ffffff",
@@ -56,6 +59,9 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderColor: "#ffffff",
     borderWidth: 2.8,
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
   },
   button2: {
     // backgroundColor: "#ffffff",
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
     borderWidth: 2.8,
   },
 
-   button3: {
+  button3: {
     // backgroundColor: "#ffffff",
     // backgroundColor: "#ff3d00",
     backgroundColor: "#e03404",
@@ -83,7 +89,9 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderColor: "#ffffff",
     borderWidth: 2.8,
-    shadowOffset:30
+    shadowColor: "#821d01",
+    shadowRadius: 9,
+    shadowOpacity: 99,
   },
   text: {
     justifyContent: "center",
