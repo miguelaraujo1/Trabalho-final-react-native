@@ -37,3 +37,14 @@ export const getProdutoById = async (idProduto) => {
     console.log('axios: ', data)
     return data
 }
+
+export const putProdutoById = async (idProduto, idCategoria, nomeProduto, qtdEstoque, vlrUnitario) => {
+    const {data} = await api.put(`/tegloja/produtos/${idProduto}`, {idCategoria: idCategoria,
+    nomeProduto: nomeProduto,
+    quantidadeEstoque: qtdEstoque,
+    valorUnitario: vlrUnitario})
+
+    console.log("Axios Put: ", data)
+
+    return data
+}
