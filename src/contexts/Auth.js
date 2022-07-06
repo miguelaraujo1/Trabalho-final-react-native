@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const AuthContext = createContext();
 
@@ -9,9 +10,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const recoveredUser = localStorage.getItem("user");
+    const recoveredUser = AsyncStorage.getItem("user");
     if (recoveredUser) {
-      setUser(JSON.parse(recoveredUser));
+      setUser(recoveredUser);
     }
     setLoading(false)
   }, []);
@@ -24,11 +25,11 @@ export const AuthProvider = ({ children }) => {
       email,
     };
 
-    localStorage.setItem("user", JSON.stringify(loggedUser));
+    AsyncStorage.setItem("user", JSON.stringify(loggedUser));
 
     //verificação de senha correta
     if (password === "secret") {
-      setUser(loggedUser);
+      setUser({ id: "123", email });
       navigation.navigate("Root");
     } else {
       alert("dados incorretos, por favor tente novamente.");
