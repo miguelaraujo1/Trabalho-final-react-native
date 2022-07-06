@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
     const recoveredUser = AsyncStorage.getItem("user");
     if (recoveredUser) {
       setUser(recoveredUser);
+      //anotar
     }
     setLoading(false)
   }, []);
@@ -29,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
     //verificação de senha correta
     if (password === "secret") {
-      setUser({ id: "123", email });
+      setUser(loggedUser);
       navigation.navigate("Root");
     } else {
       alert("dados incorretos, por favor tente novamente.");
