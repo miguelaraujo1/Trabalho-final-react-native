@@ -7,6 +7,7 @@ import { styles } from "./styles.js";
 import { ButtonStyle, ButtonStyle1 } from "../../components/ButtonStyle/ButtonStyle";
 import { AuthContext } from "../../contexts/Auth";
 
+
 export const SignScreen = ({navigation}) => {
 
   

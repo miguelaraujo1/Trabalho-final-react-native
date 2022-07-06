@@ -27,7 +27,7 @@ export const TabsProduto = () => {
       <Tabs.Navigator screenOptions={{tabBarActiveTintColor:"white",tabBarStyle:{backgroundColor:"#e03404", borderTopColor:"white", borderTopWidth:2.6}}} >
         {/* BUTTON FICTICIO */}
         
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="Listar"
           component={ListarProdutos}
           options={{ headerShown: false, tabBarIcon: ({ color, size, focused }) => {
@@ -36,7 +36,7 @@ export const TabsProduto = () => {
             }
             return <Ionicons name="search-outline" size={size} color={color}/>
           }  }}
-        />
+        /> */}
         <Tabs.Screen
           name="Cadastrar"
           component={CadastrarProdutos}

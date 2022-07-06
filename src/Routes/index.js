@@ -43,7 +43,7 @@ export const Routes = () => {
     <NavigationContainer>
       <AuthProvider>
         <Stack.Navigator>
-          <Stack.Screen name="SignScreen" component={SignScreen} options={{ headerShown: false }} />
+          {/* <Stack.Screen name="SignScreen" component={SignScreen} options={{ headerShown: false }} /> */}
           <Stack.Screen name="Root" component={TabsProduto} options={{ headerShown: false }}/>
             <Stack.Screen name="ExibirProduto" component={ExibirProduto}  />
                 
