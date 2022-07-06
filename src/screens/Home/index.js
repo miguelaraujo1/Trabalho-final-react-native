@@ -4,7 +4,7 @@ import { Button} from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
 import { styles } from "./styles";
 import { AuthContext } from "../../contexts/Auth";
-import { ButtonStyle2 } from "../../components/ButtonStyle";
+import { ButtonStyle2 } from "../../components/ButtonStyle/ButtonStyle";
 
 const Item = ({ title }) => (
     <View style={styles.item}>

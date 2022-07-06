@@ -4,7 +4,7 @@ import { View, Image, Button, TextInput, Text } from "react-native";
 //import { MyButton } from '../components/MyButton'
 import bgImg from "../../images/logobike.png";
 import { styles } from "./styles.js";
-import { ButtonStyle, ButtonStyle1 } from "../../components/ButtonStyle";
+import { ButtonStyle, ButtonStyle1 } from "../../components/ButtonStyle/ButtonStyle";
 import { AuthContext } from "../../contexts/Auth";
 
 export const SignScreen = ({navigation}) => {
@@ -25,8 +25,8 @@ export const SignScreen = ({navigation}) => {
         <Image style={styles.image} resizeMode="contain" source={bgImg} />
         <Text style={styles.marca}>AppBike</Text>
         {/* <Text>{String(authenticated)}</Text> */}
-        <TextInput placeholder="email@email.com" value={email} onChangeText={setEmail} style={styles.input} />
-        <TextInput secureTextEntry placeholder="senha" value={password} onChangeText={setPassword} style={styles.input} />
+        <TextInput placeholder="email@email.com" placeholderTextColor={"white"} value={email} onChangeText={setEmail} style={styles.input} />
+        <TextInput secureTextEntry placeholder="senha" placeholderTextColor={"white"} value={password} onChangeText={setPassword} style={styles.input} />
         <Text style={{margin: '2%'}}></Text>
         <View style={styles.viewStyle}>
         <ButtonStyle labelButton="ENTRAR" onpress={handleSubmit}/>

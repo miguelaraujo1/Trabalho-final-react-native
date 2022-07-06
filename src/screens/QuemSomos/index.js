@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import ListaHorizontal from "../../ListaHorizontal/";
+import ListaHorizontal from "../../components/ListaHorizontal";
 
 // const will = require("../../images/will.jfif");
 const miguel = require("../../images/miguel.jpeg");
