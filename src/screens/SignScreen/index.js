@@ -24,7 +24,7 @@ export const SignScreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={{flex: 1, justifyContent: "center", width: "100%", alignItems: "center"}}>
         <Image style={styles.image} resizeMode="contain" source={bgImg} />
-        <Text style={styles.marca}>AppBike</Text>
+        <Text style={styles.marca}>BikeLovers</Text>
         {/* <Text>{String(authenticated)}</Text> */}
         <TextInput placeholder="email@email.com" placeholderTextColor={"white"} value={email} onChangeText={setEmail} style={styles.input} />
         <TextInput secureTextEntry placeholder="senha" placeholderTextColor={"white"} value={password} onChangeText={setPassword} style={styles.input} />
@@ -40,7 +40,7 @@ export const SignScreen = ({navigation}) => {
 
       <Text style={{marginTop: '13%'}}>
         <Text style={{color: "#ffffff", fontSize: 13}}>by </Text>
-        <Text style={styles.appText}>AppBike</Text>
+        <Text style={styles.appText}>BikeLovers.com</Text>
       </Text>
     </View>
   );

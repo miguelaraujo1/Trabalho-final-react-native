@@ -16,37 +16,37 @@ export const QuemSomos = () => {
       name: "Miguel",
       foto: miguel,
       id: "1",
-      texto: "Natural de Teresópolis, Responsável pelo desenvolvimento da página sobre os integrantes."
+      texto: "Natural de Teresópolis, 20 anos de idade. CEO da empresa."
     },
     {
       name: "Danilo",
       foto: danilo,
       id: "2",
-      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
+      texto: "Natural de Nova Friburgo, 19 anos de idade. Diretor financeiro."
     },
     {
       name: "Cynthia",
       foto: cynthia,
       id: "4",
-      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
+      texto: "Natural de Nova Friburgo, 31 anos de idade. Diretora de marketing"
     },
     {
       name: "Vinicius",
       foto: vinicius,
       id: "5",
-      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
+      texto: "Natural de Nova Friburgo, 34 anos de idade. CTO da empresa"
     },
     {
         name:'Eduardo',
         foto: eduardo,
         id:"6",
-        texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
+        texto: "Natural de Nova Friburgo, 21 anos de idade. Diretor de recursos humanos"
     },
     {
       name:'Paulo Vitor',
       foto: pv,
       id:"7",
-      texto: "Natural de Nova Friburgo, Responsável pelo desenvolvimento da página sobre os integrantes."
+      texto: "Natural de Nova Friburgo, 26 anos de idade. Diretor geral de franquia"
   },
   ];
   return (

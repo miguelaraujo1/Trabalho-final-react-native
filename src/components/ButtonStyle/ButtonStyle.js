@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     //backgroundColor: "#ffffff",
     backgroundColor: "green",
     width: "40%",
-    height: "90%",
+    height: 40,
     margin: 12,
     justifyContent: "center",
     alignItems: "center",
@@ -167,12 +167,13 @@ const styles = StyleSheet.create({
     shadowColor: "#821d01",
     shadowRadius: 9,
     shadowOpacity: 99,
+    marginTop:35
   },
   button7: {
     //backgroundColor: "#ffffff",
     backgroundColor: "red",
     width: "40%",
-    height: "90%",
+    height: 40,
     margin: 12,
     justifyContent: "center",
     alignItems: "center",
@@ -182,6 +183,7 @@ const styles = StyleSheet.create({
     shadowColor: "#821d01",
     shadowRadius: 9,
     shadowOpacity: 99,
+    marginTop:35
   },
   text: {
     justifyContent: "center",
