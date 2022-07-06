@@ -59,7 +59,7 @@ const CadastrarProdutos = ({ CadastrarProdutos }) => {
       <View style={{ alignItems: "center", marginTop: 20, justifyContent:'center', width: '90%'  }}>
         <Text style={styles.texts}>Escolha a categoria</Text>
       </View>
-      <Picker style={{marginTop:"2%"}}
+      <Picker style={{width:"60%", backgroundColor:"white"}}
         selectedValue={categoria}
         onValueChange={(value) => setCategoria(value)}
       >
