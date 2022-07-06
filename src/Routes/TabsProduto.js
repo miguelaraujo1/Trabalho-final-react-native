@@ -8,18 +8,19 @@ import { TouchableOpacity } from "react-native";
 import { SignScreen} from "../screens/SignScreen";
 import { QuemSomos} from "../screens/QuemSomos";
 import { useContext } from 'react';
-import { AuthContext } from '../contexts/Auth'
+// import { AuthContext } from '../contexts/Auth'
 import { ButtonLogout } from "../components/ButtonStyle/ButtonStyle";
+import { LogOut } from "../screens/LogOut";
 
 
 const Tabs = createBottomTabNavigator();
 
 export const TabsProduto = () => {
-  const {logout} = useContext(AuthContext)
+  // const {logout} = useContext(AuthContext)
 
-  const handleLogout = () => {
-    logout()
-  }
+  // const handleLogout = () => {
+  //   logout()
+  // }
 
   return (
     <>
@@ -48,15 +49,15 @@ export const TabsProduto = () => {
         />
         <Tabs.Screen
           name="Log Out"
-          component={CadastrarProdutos}
+          component={LogOut}
           options={{ headerShown: false, tabBarIcon: ({ color, size, focused }) => {
             if(focused){
                 return <Ionicons name="power" size={size} color={color}/>
             }
            return(
-              <ButtonLogout onpress={handleLogout}> 
+              // <ButtonLogout onpress={handleLogout}> 
               <Ionicons name="power-outline" size={size} color={color}/>
-              </ButtonLogout> 
+              // </ButtonLogout> 
            )
           }  }}
         />
