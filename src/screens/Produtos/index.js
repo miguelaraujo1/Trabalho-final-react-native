@@ -5,6 +5,7 @@ import { Button, Avatar, Card, IconButton } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
 import ExibirProduto from "./ExibirProduto";
 import { styles } from "./styles"
+import { ButtonStyle3 } from "../../components/ButtonStyle/ButtonStyle"
 
 const Item = ({ title }) => (
     <View style={styles.item}>
@@ -55,18 +56,22 @@ const ListarProdutos = ({navigation}) => {
     return (
         <ImageBackground style={styles.container}>
             <View style={styles.categorias}>
-            {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)}
-            <Button mode="contained" onPress={()=>listarProdutos()}>TODAS</Button>
+            {/* {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)} */}
+            {categorias && categorias.map(categoria => <ButtonStyle3 labelButton={categoria.categoria} onpress={()=>listarProdutosPorCategoria(categoria.id)}/>)}
+
+            {/* <Button mode="contained" onPress={()=>listarProdutos()}>TODAS AS CATEGORIAS</Button> */}
+            <ButtonStyle3 labelButton="Todas as categorias" onpress={()=>listarProdutos()}/>
+
+
             </View>
-            {listaProdutos && <FlatList style={{width:300}} data={listaProdutos} renderItem={({ item })=> (
+            {listaProdutos && <FlatList showsVerticalScrollIndicator={false} style={{width:300}} data={listaProdutos} renderItem={({ item })=> (
                 <TouchableOpacity onPress={()=>exibirProduto(item.idProduto)}>
 
                 <Card.Title 
-                    
+                    style={{borderColor:"white", borderWidth:3, borderRadius:12, margin:1.5, backgroundColor:"#e03404", shadowColor:"black", shadowRadius:5.5, shadowOpacity:10}}
                     title={item.nomeProduto}
                     subtitle={`Qtd: ${item.quantidadeEstoque}`}
-                    left={(props) => <Avatar.Icon {...props} icon="folder" />}
-                    
+                    left={(props) => <Avatar.Icon {...props} icon="folder" />}    
                     />
                 </TouchableOpacity>   
             )} keyExtractor={item => item.idProduto}/>}

@@ -76,14 +76,15 @@ const styles = StyleSheet.create({
     // backgroundColor: "#ffffff",
     // backgroundColor: "#ff3d00",
     backgroundColor: "#e03404",
-    width: "15%",
-    height: "15%",
+    width: "45%",
+    height: "30%",
     margin: 7,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 6,
     borderColor: "#ffffff",
     borderWidth: 2.8,
+    shadowOffset:30
   },
   text: {
     justifyContent: "center",
