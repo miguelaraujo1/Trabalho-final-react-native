@@ -31,7 +31,6 @@ export const ButtonStyle3 = ({ labelButton, onpress }) => {
     </TouchableOpacity>
   );
 };
-
 const styles = StyleSheet.create({
   button: {
     // backgroundColor: "#ffffff",

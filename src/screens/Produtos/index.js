@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { ImageBackground, Text, FlatList, View} from "react-native"
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { ImageBackground, Text, FlatList, View, TouchableOpacity} from "react-native"
 import { Button, Avatar, Card, IconButton } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
 import ExibirProduto from "./ExibirProduto";
@@ -57,7 +56,7 @@ const ListarProdutos = ({navigation}) => {
         <ImageBackground style={styles.container}>
             <View style={styles.categorias}>
             {/* {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)} */}
-            {categorias && categorias.map(categoria => <ButtonStyle3 labelButton={categoria.categoria} onpress={()=>listarProdutosPorCategoria(categoria.id)}/>)}
+            {categorias && categorias.map(categoria => <ButtonStyle3 labelButton={categoria.categoria} key={categoria.id} onpress={()=>listarProdutosPorCategoria(categoria.id)}/>)}
 
             {/* <Button mode="contained" onPress={()=>listarProdutos()}>TODAS AS CATEGORIAS</Button> */}
             <ButtonStyle3 labelButton="Todas as categorias" onpress={()=>listarProdutos()}/>

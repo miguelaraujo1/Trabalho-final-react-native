@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     console.log("logout");
-    localStorage.removeItem('user')
+    AsyncStorage.removeItem('user')
     setUser(null);
     navigation.navigate("SignScreen");
   };
