@@ -13,7 +13,7 @@ export const getProdutosByCategoria = async (id) => {
 }
 
 export const postProduto = async(idCategoria ,nomeProduto, qtdEstoque, valorUnitario) => {
-    const { data } = await api.post("/tegloja/categorias", {idCategoria: idCategoria,
+    const { data } = await api.post("/tegloja/produtos", {idCategoria: idCategoria,
     nomeProduto: nomeProduto,
     quantidadeEstoque: qtdEstoque,
     valorUnitario: valorUnitario})
@@ -21,8 +21,30 @@ export const postProduto = async(idCategoria ,nomeProduto, qtdEstoque, valorUnit
     return data
 }
 
+// export const postFotoProduto = async (idProduto) => {
+//     const {data} = await api.post(`/tegloja/produtos/${idProduto}/foto`, )
+// }
+
 export const getCategorias = async () => {
     const { data } = await api.get("/tegloja/categorias")
+
+    return data
+}
+
+export const getProdutoById = async (idProduto) => {
+    const {data} = await api.get(`/tegloja/produtos/${idProduto}`)
+
+    console.log('axios: ', data)
+    return data
+}
+
+export const putProdutoById = async (idProduto, idCategoria, nomeProduto, qtdEstoque, vlrUnitario) => {
+    const {data} = await api.put(`/tegloja/produtos/${idProduto}`, {idCategoria: idCategoria,
+    nomeProduto: nomeProduto,
+    quantidadeEstoque: qtdEstoque,
+    valorUnitario: vlrUnitario})
+
+    console.log("Axios Put: ", data)
 
     return data
 }

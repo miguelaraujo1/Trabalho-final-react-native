@@ -10,33 +10,21 @@ import { SignScreen } from "../screens/SignScreen";
 import { AuthProvider } from "../contexts/Auth";
 import { Home } from "../screens/Home";
 import { QuemSomos } from "../screens/QuemSomos";
+import { TabsProduto } from "./TabsProduto";
+import { ProdutoProvider } from "../contexts/ProdutoContext";
+import ExibirProduto from "../screens/Produtos/ExibirProduto";
 const Stack = createNativeStackNavigator();
-import RotaProduto from "./RotaProduto";
 
 export const Routes = () => {
-  // const navigation = useNavigation();
-  // const Private = ({ children }) => {
-  //   const { authenticated, loading } = useContext(AuthContext);
-
-  //   if (loading) {
-  //     return <Text>Loading...</Text>
-  //   }
-
-  //   //proteção de endpoint da url
-  //   if (!authenticated) {
-  //     return navigation.navigate("SignIn");
-  //   }
-  //   return children
-  // };
-
   return (
     <NavigationContainer>
       <AuthProvider>
         <Stack.Navigator>
-          <Stack.Screen name="SignScreen"component={SignScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="RotaProduto" component={RotaProduto} />
+          <Stack.Screen name="SignScreen" component={SignScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Root" component={TabsProduto} options={{ headerShown: false }}/>
+            <Stack.Screen name="ExibirProduto" component={ExibirProduto}  />
           <Stack.Screen name="QuemSomos" component={QuemSomos} />
+
         </Stack.Navigator>
       </AuthProvider>
     </NavigationContainer>

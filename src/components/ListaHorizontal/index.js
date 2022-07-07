@@ -20,11 +20,12 @@ const ListaHorizontal = ({ dados }) => {
         showsHorizontalScrollIndicator={false}
         scrollEventThrottle={16}
         decelerationRate="fast"
-        style={{ marginTop: 20 }}
+        style={{ marginTop: 20}}
         renderItem={({ item, index }) => (
           <View
             key={index}
             style={{
+
               width: width * 0.8 - 20,
               height: 600,
               marginHorizontal: 10,
@@ -32,6 +33,7 @@ const ListaHorizontal = ({ dados }) => {
               alignItems: "center",
               backgroundColor: "#ff3d00",
               marginBottom:'7%',
+              marginTop:'11%'
               
             }}
           >

@@ -4,7 +4,9 @@ export const styles = StyleSheet.create({
     container: {
         flex:1,
         alignItems: 'center',
-        marginTop: 30
+        marginTop: 30,
+        backgroundColor:'#ff3d00'
+   
     },
     item: {
         backgroundColor: '#f9c2ff',
@@ -16,8 +18,10 @@ export const styles = StyleSheet.create({
     categorias: {
         flexDirection: "row",
         flexWrap: 'wrap',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 5 
+        margin: "3%",
+        width:"90%",
+        height:"20%"
     }
 })

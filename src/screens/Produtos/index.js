@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { ImageBackground, Text, FlatList, View} from "react-native"
-import { Button } from 'react-native-paper';
+import { ImageBackground, Text, FlatList, View, TouchableOpacity} from "react-native"
+import { Button, Avatar, Card, IconButton } from 'react-native-paper';
 import { getCategorias, getProdutos, getProdutosByCategoria } from "../../services/axiosClient"
+import ExibirProduto from "./ExibirProduto";
 import { styles } from "./styles"
+import { ButtonStyle3 } from "../../components/ButtonStyle/ButtonStyle"
 
 const Item = ({ title }) => (
     <View style={styles.item}>
@@ -29,6 +31,10 @@ const ListarProdutos = ({navigation}) => {
         setCategorias(categorias)
     }
 
+    const exibirProduto = (idProduto) => {
+        navigation.navigate("ExibirProduto", {idProduto: idProduto})
+    }
+
     useEffect(()=> {
         if(listaProdutos === null) {
             listarProdutos()
@@ -48,12 +54,25 @@ const ListarProdutos = ({navigation}) => {
 
     return (
         <ImageBackground style={styles.container}>
-            <Text>BikeLovers!</Text>
             <View style={styles.categorias}>
-            {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)}
+            {/* {categorias && categorias.map(categoria => <Button mode="contained" key={categoria.id}  onPress={()=>listarProdutosPorCategoria(categoria.id)}>{categoria.categoria}</Button>)} */}
+            {categorias && categorias.map(categoria => <ButtonStyle3 labelButton={categoria.categoria} key={categoria.id} onpress={()=>listarProdutosPorCategoria(categoria.id)}/>)}
+
+            {/* <Button mode="contained" onPress={()=>listarProdutos()}>TODAS AS CATEGORIAS</Button> */}
+            <ButtonStyle3 labelButton="Todas as categorias" onpress={()=>listarProdutos()}/>
+
+
             </View>
-            {listaProdutos && <FlatList data={listaProdutos} renderItem={({ item })=> (
-                <Text style={styles.item}>{item.nomeProduto}</Text>
+            {listaProdutos && <FlatList showsVerticalScrollIndicator={false} style={{width:"80%" }} data={listaProdutos} renderItem={({ item })=> (
+                <TouchableOpacity onPress={()=>exibirProduto(item.idProduto)}>
+
+                <Card.Title 
+                    style={{borderColor:"white", borderWidth:3, borderRadius:12, margin:1.5, backgroundColor:"#e03404", shadowColor:"#821d01", shadowRadius:15, shadowOpacity:95}}
+                    title={item.nomeProduto}
+                    subtitle={`Qtd: ${item.quantidadeEstoque}`}
+                    left={(props) => <Avatar.Icon {...props} icon="folder" />}    
+                    />
+                </TouchableOpacity>   
             )} keyExtractor={item => item.idProduto}/>}
         </ImageBackground>
     )
